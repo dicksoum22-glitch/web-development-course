@@ -3,34 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidiki Camara- Modern Layouts</title>
+    <meta name="description" content="Sidiki Camara Portfolio - Web Development Student">
+    <meta name="keywords" content="Sidiki Camara, Web Development, Portfolio, HTML, CSS, JavaScript">
+    <meta name="author" content="Sidiki Camara">
+    <title>Sidiki Camara - Modern Layouts</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Header section with name and major -->
     <header>
         <h1 class="header-title">Sidiki Camara</h1>
-        <p style="text-align: center;"><strong>Major:</strong> Web Development / Computer Science</p>
+        <p class="header-subtitle"><strong>Major:</strong> Web Development / Computer Science</p>
     </header>
 
-    <hr style="margin: 20px 0;">
+    <!-- Navigation bar linking to each section -->
+    <nav>
+        <a href="#about">About</a> |
+        <a href="#media">Media</a> |
+        <a href="#education">Education</a> |
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <hr class="divider">
 
     <main>
         <!-- 1. Float Section -->
-        <section class="float-container" style="margin-bottom: 30px;">
+        <section id="about" class="float-container">
             <div class="float-left">
                 <h3 class="section-title">About Me</h3>
+                <img src="profile.jpg" alt="Sidiki Camara profile photo" width="120" height="120">
                 <p>Web Development Student passionate about modern layout techniques and responsive design.</p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                </ul>
             </div>
-            <div class="float-right">
+            <div class="float-right" id="contact">
                 <h3 class="section-title">Contact Info</h3>
                 <p>Email: dicksoum22@gmail.com<br>Phone: +224 627 738 111</p>
             </div>
         </section>
 
         <!-- 2. Flexbox Section -->
-        <section style="margin-bottom: 30px;">
-            <h2 class="section-title">Flexbox Container: Media Section</h2>
+        <section id="media">
+            <h2 class="section-title">Media Section</h2>
             <div class="flex-container">
                 <div class="flex-item">
                     <h3>Audio Introduction</h3>
@@ -48,8 +66,8 @@
         </section>
 
         <!-- 3. CSS Grid Section -->
-        <section style="margin-bottom: 30px;">
-            <h2 class="section-title">CSS Grid Layout: Education & Contact</h2>
+        <section id="education">
+            <h2 class="section-title">Education & Contact</h2>
             <div class="grid-container">
                 <div class="grid-item">
                     <h3>Education & Skills</h3>
@@ -78,14 +96,15 @@
 
                 <div class="grid-item">
                     <h3>Contact Form</h3>
-                    <form class="contact-form">
-                        <label>Full Name:</label>
-                        <input type="text" class="form-input" required>
-                        <label>Message:</label>
-                        <textarea class="form-textarea" rows="3" required></textarea>
-                        
+                    <form class="contact-form" action="#" method="post" autocomplete="on">
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" id="fullname" name="fullname" class="form-input" required>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="3" required></textarea>
+
                         <!-- Utility classes used for button styling -->
-                        <button type="submit" class="bg-green-500 text-white p-3 rounded shadow-md hover:bg-green-600" style="border:none; cursor:pointer;">
+                        <button type="submit" class="bg-green-500 text-white p-3 rounded shadow-md hover:bg-green-600">
                             Send Message
                         </button>
                     </form>
@@ -94,11 +113,12 @@
         </section>
     </main>
 
-    <hr>
+    <hr class="divider">
 
-    <footer style="text-align: center; margin-top: 20px;">
+    <footer id="page-footer">
         <p>&copy; 2026 Sidiki Camara. All rights reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
