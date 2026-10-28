@@ -111,7 +111,8 @@ video, audio {
     border-collapse: collapse;
 }
 
-.cv-table th, .cv-table td {
+.cv-table th,
+.cv-table td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
@@ -128,7 +129,8 @@ video, audio {
     gap: 10px;
 }
 
-.form-input, .form-textarea {
+.form-input,
+.form-textarea {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -136,12 +138,29 @@ video, audio {
 }
 
 /* --- 4. Custom Utility Classes (Tailwind Concept) --- */
-.bg-green-500 { background-color: #2ecc71; }
-.text-white { color: white; }
-.p-3 { padding: 12px; }
-.rounded { border-radius: 4px; }
-.shadow-md { box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-.hover\:bg-green-600:hover { background-color: #27ae60; }
+.bg-green-500 {
+    background-color: #2ecc71;
+}
+
+.text-white {
+    color: white;
+}
+
+.p-3 {
+    padding: 12px;
+}
+
+.rounded {
+    border-radius: 4px;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.hover\:bg-green-600:hover {
+    background-color: #27ae60;
+}
 
 /* --- 5. Header Logo --- */
 .header-top {
@@ -176,6 +195,7 @@ video, audio {
 
 /* Tablet and below */
 @media only screen and (max-width: 768px) {
+
     .float-left,
     .float-right {
         float: none;
@@ -190,6 +210,7 @@ video, audio {
 
 /* Mobile */
 @media only screen and (max-width: 600px) {
+
     .flex-container {
         flex-direction: column;
     }
