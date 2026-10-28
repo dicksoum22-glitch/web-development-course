@@ -7,7 +7,11 @@
     <meta name="keywords" content="Sidiki Camara, Web Development, Portfolio, HTML, CSS, JavaScript">
     <meta name="author" content="Sidiki Camara">
     <title>Sidiki Camara - Modern Layouts</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS Framework -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -22,6 +26,7 @@
         <a href="#about">About</a> |
         <a href="#media">Media</a> |
         <a href="#education">Education</a> |
+        <a href="#game">Guessing Game</a> |
         <a href="#contact">Contact</a>
     </nav>
 
@@ -40,6 +45,7 @@
                     <li>JavaScript</li>
                 </ul>
             </div>
+
             <div class="float-right" id="contact">
                 <h3 class="section-title">Contact Info</h3>
                 <p>Email: dicksoum22@gmail.com<br>Phone: +224 627 738 111</p>
@@ -49,6 +55,7 @@
         <!-- 2. Flexbox Section -->
         <section id="media">
             <h2 class="section-title">Media Section</h2>
+
             <div class="flex-container">
                 <div class="flex-item">
                     <h3>Audio Introduction</h3>
@@ -56,6 +63,7 @@
                         <source src="sample.mp3" type="audio/mpeg">
                     </audio>
                 </div>
+
                 <div class="flex-item">
                     <h3>Video Presentation</h3>
                     <video controls>
@@ -68,9 +76,11 @@
         <!-- 3. CSS Grid Section -->
         <section id="education">
             <h2 class="section-title">Education & Contact</h2>
+
             <div class="grid-container">
                 <div class="grid-item">
                     <h3>Education & Skills</h3>
+
                     <table class="cv-table">
                         <thead>
                             <tr>
@@ -79,12 +89,14 @@
                                 <th>Year</th>
                             </tr>
                         </thead>
+
                         <tbody>
                             <tr>
                                 <td>Bachelor Web Dev</td>
                                 <td>University</td>
                                 <td>2023 - 2026</td>
                             </tr>
+
                             <tr>
                                 <td>HTML, CSS, JS</td>
                                 <td>Intermediate</td>
@@ -96,21 +108,60 @@
 
                 <div class="grid-item">
                     <h3>Contact Form</h3>
+
                     <form class="contact-form" action="#" method="post" autocomplete="on">
                         <label for="fullname">Full Name:</label>
-                        <input type="text" id="fullname" name="fullname" class="form-input" required>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            class="form-input"
+                            required
+                        >
 
                         <label for="message">Message:</label>
-                        <textarea id="message" name="message" class="form-textarea" rows="3" required></textarea>
 
-                        <!-- Utility classes used for button styling -->
-                        <button type="submit" class="bg-green-500 text-white p-3 rounded shadow-md hover:bg-green-600">
+                        <textarea
+                            id="message"
+                            name="message"
+                            class="form-textarea"
+                            rows="3"
+                            required
+                        ></textarea>
+
+                        <!-- Tailwind CSS classes -->
+                        <button
+                            type="submit"
+                            class="bg-green-500 text-white p-3 rounded shadow-md hover:bg-green-600"
+                        >
                             Send Message
                         </button>
                     </form>
                 </div>
             </div>
         </section>
+
+        <!-- 4. Guessing Number Game -->
+        <section id="game" class="mt-8 p-5 bg-white rounded-lg shadow-md">
+
+            <h2 class="section-title">Guessing Number Game</h2>
+
+            <p>
+                Guess a number between 0 and 10.
+                The computer will generate a random number.
+            </p>
+
+            <!-- Tailwind CSS Framework classes -->
+            <button
+                onclick="startGuessingGame()"
+                class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+                Start Guessing Game
+            </button>
+
+        </section>
+
     </main>
 
     <hr class="divider">
